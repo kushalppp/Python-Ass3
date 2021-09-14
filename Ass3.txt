@@ -1,0 +1,176 @@
+
+1) We can create a list by putting the elementes separted by comma and enclosed in a square bracketes[].
+  l=[1,5,3,4]
+- All elementes of the list can be accessed by index poaition ,+ve index follows from left to right(0,1,2 etc) and negative index from right to left(-1,-2,-3 etc).
+1.index slicing:-slice operator[start:stop:step]
+ start:-start indicates from where we have to start the slicing,by default from 0th index.
+ stop:-stop indiactesfrom where we have to go for slice, by default the end of the list.
+ step:-it shows the increment value for slice.
+eg:-list=[1,50,30,40,50]
+    print(l[2:4:])
+
+
+2) As we know list are the dynamic datatypes that means we can update the list.
+-list.append() is used to add the elementes at the end of the list.
+ list=[1,5,30,40]
+list.append(50)
+print(list)
+list=[1,5,30,40,50]
+
+3)it will clear all the elementes of the list.(list.clear()).
+ list=[10,20,3,40]
+list.clear()
+list=[]
+
+4)copy() will create the clone of the list.
+ list=[10,20,3,4]
+ x=list.copy()
+ x=[10,20,3,4]
+
+5)count() will returns the number of occurrence of the specified item.
+ list=[1,20,3,40,4,1]
+list.count(1)
+>>2
+
+
+6)index() will returns the index of the first occurence of specified item.
+ list=[1,20,3,4,10]
+list.index(1)
+>>0
+
+7)insert() takes two argument first is the position at which object has to be insert and second is the object itself.
+ list=[1,10,6,40]
+list.insert(0,5)
+print(list)
+ l=[5,1,10,6,40]
+
+8)pop() will remove the last element and retuens the last item also..
+ list=[10,20,30,40]
+list.pop()
+>>40
+
+9)remove() will only remove the element presrnt in the list.
+ list=[1,2,30,40]
+list.remove(40)
+ list=[1,2,30]
+
+10)sort() will sort the list in alphabetical or acending manners it will sort only homogeneous data.
+ list=[1,20,30,50,40]
+list.sort()
+print(list)
+ list=[1,20,30,40,50]
+
+11)reverse() will reverse the whole list.
+ list=[1,20,3,40]
+list.reverse()
+print(list)
+list=[40,3,20,1]
+
+12)nested list:-when one list is inside the second list then this is called as nested list.
+list=[1,20,[3,40]]
+print(list[2])
+[3,40]
+
+2)* The main difference between tuple and list is tuples are immutable means once the tuple creted we can't change it .its the read only version of the list.
+
+3)*Dictionary:-
+creation of a dictionary can be done by two ways.allthe objectes of the dictionary is associated with key:value pairs.
+d=dict({key:value}) or {key:value}
+
+1)
+clear:- it will clear all the elementes of the dictionary.
+d={10:"raji",20:"mohit",30:"ram"}
+d.clear()
+print(d)
+output:_
+d={} ,#empty dictionary.
+
+2)copy()-to create a exact duplicate dictionary.
+d={10:"rajit",20:"mohit"}
+c=d.copy()
+output:-
+{10:"rajit",20:"mohit"}
+
+3)get():
+To get the value associated with the key
+d.get(key) 
+ If the key is available then returns the corresponding value otherwise returns None.It wont raise any error.
+d={10:"rajit",20:"mohit"}
+d.get(20)
+'mohit'
+
+4)items()-it will returns the items in key value pair.
+
+5)pop():-it remove the specified key and returns the value associated with it.
+d.pop(key)
+d={10:"rajit",20:"mohit"}
+d.pop(20)
+mohit.
+
+6)popitem():-it removes the arbitrary item from the dictionary and returns it.
+d={10:"rajit",20:"mohit"}
+d.popitem()
+{20:"mohit"}
+print(d)
+{10:"rajit"}
+
+7).update(x)
+ All items present in the dictionary x will be added to dictionary d
+
+8)if we create dictionary inside the dictionary then it is called as nested dictionary.
+q={1:{'name':'john},2:"has"}
+print(people[1]['name'])
+
+10)dict.copy() is used to append a dictionary to a list.
+d={10:"rajit",20:"mohit"}
+l=[]
+c=d.copy()
+l.append(c)
+print(l)
+[{10:"rajit",20:"mohit"}]
+
+4)*set:-set is collection of objectes which is unique ,no any duplicates elementes are present in set.
+1)union()- it will returns all the elementes present on both set.
+x={10,2,30,40}
+y={30,40,5,60}
+syntax:- x.union(y) or x|y
+ x={10,2,30,40}
+>>> y={30,40,5,60}
+>>> print(x.union(y))
+{40, 10, 5, 2, 60, 30}
+>>> print(x|y)
+{40, 10, 5, 2, 60, 30}
+
+2)intersection():-it will return only common elementes present on both set.
+syntax:-x.intersection(y) or x&y
+ print(x.intersection(y))
+ x={10,2,30,4}
+>>> y={30,4,5,60}
+print(x.intersection(y))
+{4, 30}
+>>> print(x&y)
+{4, 30}
+
+3)difference():-it will retrun the elementes which is present on first set but not in second.
+ x={10,20,30,4}
+>>> y={30,4,50,60}
+print(x.difference(y))
+{10,20}
+>>> print(x-y)
+{10,20}
+
+4)issubset():-it will return true if all items in first set is present in second set.
+a={"A","B","C"}
+>>> b={"B","C","D"}
+>>> print(a.issubset(b))
+False
+>>print(a<=b)
+false
+
+5)issuperset():-it will return true if all items in second set is present in first set.
+>>> a={"A","B","C"}
+>>> b={"B","C","D"}
+>>> print(a.issuperset(b))
+False
+>>> print(a>=b)
+False
